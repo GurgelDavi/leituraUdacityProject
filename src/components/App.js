@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
 import '../App.css';
+import * as postsApi from '../utils/postsApi'
 
 class App extends Component {
+  state = {
+    books :[],
+    showSearchPage: true
+  }
+  componentDidMount(){
+   postsApi.getCategories().then((categories)=>{
+     this.setState({categories:categories})
+     console.log(categories);
+   })
+  }
   render() {
     return (
       <div className="App">
