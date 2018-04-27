@@ -7,21 +7,6 @@ class App extends Component {
   state = {
     categories:[],
   }
-  componentDidMount(){
-    const id = " 8xf0y6ziyjabvozdd253nd"
-   postsApi.getCategories().then((categories)=>{
-     this.setState({categories:categories})
-     console.log(categories);
-   })
-   postsApi.getPosts().then((posts)=>{
-     this.setState({posts:posts})
-     console.log(posts);
-   })
-   /*postsApi.getPostsByCat("react").then((post)=>{
-     this.setState({post:post})
-     console.log(post);
-   })*/
-  }
   render() {
     return (
       <div className="App">

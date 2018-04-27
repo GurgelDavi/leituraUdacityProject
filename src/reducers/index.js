@@ -1,16 +1,16 @@
 import {combineReducers} from 'redux'
 import {
-  POST_SOMETHING,
-  VOTE_POST, COMMENT_ON_POST,
+VOTE_POST,
+POST_SOMETHING,
+COMMENT_ON_POST
 } from '../actions'
 
-
-
-const initialPostsState = {
-  categories = []
+function reducer(state = {}, action) {
+  switch(action.type){
+    default :
+      return state
+  }
 }
-
-
 export default combineReducers({
-
+  reducer,
 })
