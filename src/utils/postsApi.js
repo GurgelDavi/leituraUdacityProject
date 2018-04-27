@@ -10,8 +10,22 @@ const headers = {
   'Authorization': token
 }
 
-
 export const getCategories = () =>
   fetch(`${api}/categories`, { headers })
     .then(res => res.json())
     .then(data => data.categories)
+
+export const getPostsByCat = (category) =>
+    fetch(`${api}/posts/${category}`, { headers })
+      .then(res => res.json())
+      .then(data => data)
+
+export const getPosts = () =>
+    fetch(`${api}/posts`, { headers })
+      .then(res => res.json())
+      .then(data => data)
+
+export const getPost = (postId) => //maybe working ??
+  fetch(`${api}/posts/${postId}`, { headers })
+    .then(res => res.json())
+    .then(data => data.posts)

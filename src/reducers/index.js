@@ -7,10 +7,7 @@ import {
 
 
 const initialPostsState = {
-  state = {}
-  postsApi.getCategories().then((categories)=>{
-    state.categories = categories
-  })
+  categories = []
 }
 
 
