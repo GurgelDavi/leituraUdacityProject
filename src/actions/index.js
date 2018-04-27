@@ -2,10 +2,10 @@ export const VOTE_POST = 'VOTE_POST'
 export const POST_SOMETHING = 'POST_SOMETHING'
 export const COMMENT_ON_POST = 'COMMENT_ON_POST'
 
-export function postSomething ({ text, category }) {
+export function postSomething ({ post, category }) {
   return {
     type: POST_SOMETHING,
-    text,
+    post,
     category,
   }
 }
@@ -18,10 +18,10 @@ export function votePost ({ post, vote  }) {
   }
 }
 
-export function commentPost ({ post, comment  }) {
+export function commentPost ({ parentPost, post  }) {
   return {
-    type: commentPost,
+    type: COMMENT_ON_POST,
     post,
-    comment,
+    parentPost,
   }
 }
