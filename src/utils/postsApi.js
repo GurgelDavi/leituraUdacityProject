@@ -16,7 +16,10 @@ export const getCategories = () =>
     .then(data => data.categories)
 
 export const getPostsByCat = (category) =>
-    fetch(`${api}/posts/${category}`, { headers })
+    fetch(`${api}/${category}/posts/`, {
+      method:'GET',
+      headers: { Authorization:'whatever-you-want' },
+     })
       .then(res => res.json())
       .then(data => data)
 
@@ -26,6 +29,9 @@ export const getPosts = () =>
       .then(data => data)
 
 export const getPost = (postId) => //maybe working ??
-  fetch(`${api}/posts/${postId}`, { headers })
+  fetch(`${api}/posts/${postId}`, {
+    method:'GET',
+    headers: { Authorization:'whatever-you-want' },
+  })
     .then(res => res.json())
     .then(data => data.posts)
