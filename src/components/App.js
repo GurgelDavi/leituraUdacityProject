@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from '../logo.svg';
 import '../App.css';
 import * as postsApi from '../utils/postsApi'
+import {connect} from 'react-redux';
 
 class App extends Component {
   state = {
@@ -62,4 +63,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect()(App);
